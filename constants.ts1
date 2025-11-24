@@ -313,7 +313,7 @@ export default function App() {
         </div>
 
         <div className="mt-12 text-center text-sm text-gray-400 pb-8">
-          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim e NewVille.
+          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim.
         </div>
 
       </main>
