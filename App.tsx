@@ -76,7 +76,7 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClose }) =>
       return;
     }
     const fee = num * 0.15;
-    setResult(`Taxa de liberação: R$ ${fee.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
+    setResult(`Taxa de liberação: $ ${fee.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
   };
 
   if (!isOpen) return null;
@@ -95,7 +95,7 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClose }) =>
         
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Valor do Veículo (R$)</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Valor do Veículo ($)</label>
             <input 
               type="number" 
               value={value}
@@ -281,8 +281,8 @@ export default function App() {
                         <Banknote size={16} className="text-green-600" />
                         <span className="font-semibold text-gray-900">
                           {typeof law.fine === 'number' 
-                            ? `R$ ${law.fine.toLocaleString('pt-BR')}` 
-                            : `R$ ${law.fine}`}
+                            ? `$ ${law.fine.toLocaleString('pt-BR')}` 
+                            : `$ ${law.fine}`}
                         </span>
                       </div>
                     </div>
