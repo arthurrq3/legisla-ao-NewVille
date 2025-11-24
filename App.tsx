@@ -321,4 +321,4 @@ export default function App() {
       <CalculatorModal isOpen={isCalcOpen} onClose={() => setIsCalcOpen(false)} />
     </div>
   );
-  }
+}
