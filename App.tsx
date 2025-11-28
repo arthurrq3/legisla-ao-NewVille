@@ -36,7 +36,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
         <Scale size={80} className="mx-auto" />
       </div>
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-center mb-8 drop-shadow-lg">
-        Código Penal de NewVille
+        Código Penal de New Ville
       </h1>
       <p className="max-w-md text-center text-blue-100 mb-10 text-lg">
         Consulte infrações, calcule taxas e mantenha-se informado sobre as leis da cidade.
