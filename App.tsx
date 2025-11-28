@@ -36,7 +36,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
         <Scale size={80} className="mx-auto" />
       </div>
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-center mb-8 drop-shadow-lg">
-        Código Penal de Grinville
+        Código Penal de New Ville
       </h1>
       <p className="max-w-md text-center text-blue-100 mb-10 text-lg">
         Consulte infrações, calcule taxas e mantenha-se informado sobre as leis da cidade.
@@ -179,7 +179,7 @@ export default function App() {
              </div>
              <div>
                <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">Código Penal</h1>
-               <p className="text-blue-100 text-sm font-medium">Cidade de Grinville</p>
+               <p className="text-blue-100 text-sm font-medium">Cidade de Greenville</p>
              </div>
           </div>
 
@@ -249,9 +249,11 @@ export default function App() {
                 className="group bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
+                {/* Color Bar */}
                 <div className={`h-1.5 w-full ${getCategoryColor(law.category)}`} />
 
                 <div className="p-5 flex-1 flex flex-col">
+                  {/* Badge Header */}
                   <div className="flex justify-between items-start mb-3">
                     <span className={`inline-block px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wide ${getCategoryLightColor(law.category)}`}>
                       Art. {filteredLaws.indexOf(law) + 1}
@@ -311,7 +313,7 @@ export default function App() {
         </div>
 
         <div className="mt-12 text-center text-sm text-gray-400 pb-8">
-          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim e Grinville.
+          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim e Greenville.
         </div>
 
       </main>
