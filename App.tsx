@@ -36,7 +36,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
         <Scale size={80} className="mx-auto" />
       </div>
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-center mb-8 drop-shadow-lg">
-        Código Penal de New Ville
+        Código Penal de Grinville
       </h1>
       <p className="max-w-md text-center text-blue-100 mb-10 text-lg">
         Consulte infrações, calcule taxas e mantenha-se informado sobre as leis da cidade.
@@ -92,7 +92,7 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClose }) =>
             <X size={24} />
           </button>
         </div>
-        
+
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Valor do Veículo ($)</label>
@@ -171,7 +171,7 @@ export default function App() {
           <div className="absolute right-0 top-0 transform translate-x-1/3 -translate-y-1/3 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute left-0 bottom-0 transform -translate-x-1/3 translate-y-1/3 w-64 h-64 bg-indigo-300 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
           <div className="flex items-center gap-3">
              <div className="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
@@ -179,10 +179,10 @@ export default function App() {
              </div>
              <div>
                <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">Código Penal</h1>
-               <p className="text-blue-100 text-sm font-medium">Cidade de NewVille</p>
+               <p className="text-blue-100 text-sm font-medium">Cidade de Grinville</p>
              </div>
           </div>
-          
+
           <button 
             onClick={() => setIsCalcOpen(true)}
             className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-xl font-semibold transition-all hover:shadow-lg border border-white/20"
@@ -193,12 +193,12 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main Content Area - Shifted up to overlap header */}
+      {/* Main Content Area */}
       <main className="max-w-5xl mx-auto px-4 -mt-8 relative z-20">
-        
+
         {/* Search & Filter Bar */}
         <div className="bg-white rounded-2xl shadow-xl p-4 md:p-6 mb-8 border border-gray-100">
-          
+
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
             <button 
@@ -249,16 +249,14 @@ export default function App() {
                 className="group bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {/* Color Bar */}
                 <div className={`h-1.5 w-full ${getCategoryColor(law.category)}`} />
-                
+
                 <div className="p-5 flex-1 flex flex-col">
-                  {/* Badge Header */}
                   <div className="flex justify-between items-start mb-3">
                     <span className={`inline-block px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wide ${getCategoryLightColor(law.category)}`}>
                       Art. {filteredLaws.indexOf(law) + 1}
                     </span>
-                    
+
                     {law.seizure === SeizureStatus.YES && (
                       <span className="flex items-center gap-1 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full border border-yellow-200" title="Apreensão do Veículo">
                         <Car size={12} /> Apreensão
@@ -293,7 +291,7 @@ export default function App() {
                         <span>Prisão: <strong className="text-red-700">{law.jailTime} min</strong></span>
                       </div>
                     ) : (
-                      <div className="h-[38px]"></div> /* Spacer to keep cards aligned */
+                      <div className="h-[38px]"></div>
                     )}
 
                     {law.note && (
@@ -313,7 +311,7 @@ export default function App() {
         </div>
 
         <div className="mt-12 text-center text-sm text-gray-400 pb-8">
-          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim e NewVille.
+          &copy; {new Date().getFullYear()} Todos os direitos reservados ao turzim e Grinville.
         </div>
 
       </main>
